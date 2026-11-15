@@ -1,7 +1,7 @@
 {
   "name": "SuperKart backend",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": { "ghcr.io/devcontainers/features/docker-in-docker:2": {} },
+  "features": { "ghcr.io/devcontainers/features/docker-in-docker:2": { "moby": false } },
   "forwardPorts": [7860],
   "portsAttributes": { "7860": { "label": "Flask API", "onAutoForward": "silent" } },
   "postStartCommand": "nohup bash backend_files/start.sh > /tmp/backend.log 2>&1 &"
